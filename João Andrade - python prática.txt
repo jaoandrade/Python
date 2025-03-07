@@ -1,0 +1,75 @@
+Programa 1.   #Programas - João Andrade
+----------------------
+soma = 0
+while True:
+    num=int(input("Diga um número: "))
+    if num > 100:
+        print("Erro! Só é permitido números inferiores ou iguais a 100.")
+        break
+    soma+=num
+
+Programa 2.
+----------------------
+import random
+numeros = []
+for _ in range(10):
+    nalt = random.randint(1, 10)
+    numeros.append(nalt) 
+posicao = int(input("Digite a posição do número que deseja ver (1 a 10): "))
+if posicao >= 1 and posicao <= 10:
+    print("O número na posição", posicao, "é:", numeros[posicao - 1])
+    print("Os números gerados foram", numeros)
+else:
+    print("Erro. O número deve ser entre 0-10.")
+
+Programa 3.
+--------------------
+graus = int(input("Diga quantos graus Celcius, para converter em Farenheirts: "))
+Farenheirts = (graus*1.8)+32
+print(graus,"graus Celcius são",Farenheirts,"Farenheirts.")
+
+Programa 4.
+-------------------
+n = int(input("Digite um número: "))
+horas = n // 3600
+resto = n % 3600
+minutos = resto // 60
+segundos = resto % 60
+print(horas, "horas,",minutos,"minutos e",segundos,"segundos")
+
+Programa 5.
+-------------------
+contador1 = 0 
+contador2 = 0  
+superiores = []
+inferiores = []
+for i in range (10):
+    n = int(input("Diga um número: "))
+    if n > 25:
+        contador1+=1
+        superiores.append(n) 
+    elif n < 25:
+        contador2+=1
+        inferiores.append(n) 
+print("Quantidade de números maiores que 25:", contador1)
+print("Quantidade de números menores que 25:", contador2)
+print("Números maiores que 25:", superiores)
+print("Números menores que 25:", inferiores)
+
+Programa 6.
+--------------------
+soma = 0.0
+contador = 0
+while True:
+    n = float(input("Digite um número real: "))
+    if n == 0:
+        break
+    soma += n
+    contador += 1
+    print("Subtotal =", round(soma, 6)) 
+if contador > 0:
+    media = soma / contador
+else:
+    media = 0.0
+print("Total final =", round(soma, 6))
+print("Média =", round(media, 6))
